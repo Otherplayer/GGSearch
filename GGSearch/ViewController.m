@@ -7,12 +7,12 @@
 //
 
 #import "ViewController.h"
-
+#import "KVCMutableArrayProxy.h"
 
 static NSString *const KVO_CONTEXT_ADDRESS_CHANGED = @"KVO_CONTEXT_ADDRESS_CHANGED";
 
 @interface ViewController ()
-
+@property (nonatomic, strong)KVCMutableArrayProxy *items;
 @end
 
 @implementation ViewController
@@ -35,8 +35,21 @@ static NSString *const KVO_CONTEXT_ADDRESS_CHANGED = @"KVO_CONTEXT_ADDRESS_CHANG
     
     self.dataSource = [[NSMutableArray alloc] init];
     
+//    ///监控数组改变
+//    [self addObserver:self forKeyPath:@"dataSource" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:(__bridge void *)(KVO_CONTEXT_ADDRESS_CHANGED)];
+// 
+//    
+    
+    
+    
+    
+    
+    
+    self.items = [[KVCMutableArrayProxy alloc] init];
     ///监控数组改变
-    [self addObserver:self forKeyPath:@"dataSource" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:(__bridge void *)(KVO_CONTEXT_ADDRESS_CHANGED)];
+    [self addObserver:self forKeyPath:@"items.count" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:(__bridge void *)(KVO_CONTEXT_ADDRESS_CHANGED)];
+    
+    
     
 }
 
@@ -54,6 +67,7 @@ static NSString *const KVO_CONTEXT_ADDRESS_CHANGED = @"KVO_CONTEXT_ADDRESS_CHANG
 
 - (IBAction)changeAction:(id)sender {
     [newDataSourcee(self) addObject:@"fasf"];
+    [self.items addObject:@"haha"];
     self.selectedIndex = 2;
 }
 

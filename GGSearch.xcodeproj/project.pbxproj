@@ -15,6 +15,7 @@
 		633CB7621B9E96C400CC694A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 633CB7601B9E96C400CC694A /* LaunchScreen.storyboard */; };
 		633CB76D1B9E96C400CC694A /* GGSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 633CB76C1B9E96C400CC694A /* GGSearchTests.m */; };
 		633CB7781B9E96C400CC694A /* GGSearchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 633CB7771B9E96C400CC694A /* GGSearchUITests.m */; };
+		639D27381BA025AF00A1D4BA /* KVCMutableArrayProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 639D27371BA025AF00A1D4BA /* KVCMutableArrayProxy.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		633CB7731B9E96C400CC694A /* GGSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GGSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		633CB7771B9E96C400CC694A /* GGSearchUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGSearchUITests.m; sourceTree = "<group>"; };
 		633CB7791B9E96C400CC694A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		639D27361BA025AF00A1D4BA /* KVCMutableArrayProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVCMutableArrayProxy.h; sourceTree = "<group>"; };
+		639D27371BA025AF00A1D4BA /* KVCMutableArrayProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVCMutableArrayProxy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		633CB7511B9E96C400CC694A /* GGSearch */ = {
 			isa = PBXGroup;
 			children = (
+				639D27391BA025B400A1D4BA /* Proxy */,
 				633CB7551B9E96C400CC694A /* AppDelegate.h */,
 				633CB7561B9E96C400CC694A /* AppDelegate.m */,
 				633CB7581B9E96C400CC694A /* ViewController.h */,
@@ -138,6 +142,15 @@
 				633CB7791B9E96C400CC694A /* Info.plist */,
 			);
 			path = GGSearchUITests;
+			sourceTree = "<group>";
+		};
+		639D27391BA025B400A1D4BA /* Proxy */ = {
+			isa = PBXGroup;
+			children = (
+				639D27361BA025AF00A1D4BA /* KVCMutableArrayProxy.h */,
+				639D27371BA025AF00A1D4BA /* KVCMutableArrayProxy.m */,
+			);
+			name = Proxy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				639D27381BA025AF00A1D4BA /* KVCMutableArrayProxy.m in Sources */,
 				633CB75A1B9E96C400CC694A /* ViewController.m in Sources */,
 				633CB7571B9E96C400CC694A /* AppDelegate.m in Sources */,
 				633CB7541B9E96C400CC694A /* main.m in Sources */,
