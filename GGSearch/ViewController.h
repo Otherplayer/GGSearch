@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
-
+@property (nonatomic, strong) NSMutableArray *dataSource;
+@property(nonatomic) NSUInteger selectedIndex;
 @end
 
